@@ -1,4 +1,5 @@
 const sum = require('./sum');
+const myFunction = require('./sum');
 test('adds 1 + 2 to equal 3', () => {
     //toBe() works best for numbers, boleans, and strings.
     expect(sum(1,2)).toBe(3);
@@ -15,6 +16,19 @@ test('object assignment', () => {
 
 test('null is falsy', () => {
     const n = null;
-    //this checks if anwsers are undefined or null.
+    //this checks if anwsers are undefined, null, zero, or false 
     expect(n).toBeFalsy();
+});
+
+test('null is falsy', () => {
+    const n = null;
+    //this checks if anwsers are undefined, null, zero, or false 
+    expect(n).toBeFalsy();
+});
+
+test("throws on invalid input ", () => {
+    expect(() => {
+      //error throwing function 
+    myFunction("fdgfg");
+  }).toThrow();
 });
